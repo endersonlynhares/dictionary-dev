@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 1px solid red;
-  max-width: 60rem;
+  max-width: 61rem;
   min-height: 100vh;
   margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom:4rem;
 
   display: flex;
   flex-direction: column;

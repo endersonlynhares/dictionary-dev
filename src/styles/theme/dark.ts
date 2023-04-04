@@ -4,6 +4,8 @@ export const dark = {
     "base-background": "#040404",
     "base-text": "#FFFFFF",
     "base-text-secondary": "#FFFFFF",
+    "base-input": "#212D56",
+
 
     "gray-100": "#868686",
     "gray-500": "#757575",

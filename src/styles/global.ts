@@ -14,6 +14,11 @@ export const GlobalStyle = createGlobalStyle`
   body{
     background: ${props => props.theme.colors["base-background"]};
     font-size: 1.6rem;
+    font-family:"Lora", sans-serif;
+  }
+
+  input, button, textarea{
+    font-family:"Lora", sans-serif
   }
 
 

@@ -4,6 +4,7 @@ export const light = {
     "base-background": "#FFFFFF",
     "base-text": "#000000",
     "base-text-secondary": "#868686",
+    "base-input": "#E5E5E5",
 
     "gray-100": "#868686",
     "gray-500": "#757575",
