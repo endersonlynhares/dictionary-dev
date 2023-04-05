@@ -8,6 +8,7 @@ import { Search } from "./components/Search"
 import { Dictionary } from "./components/Dictionary"
 import { useState } from "react"
 import { ThemeContext } from "./contexts/ThemeContext"
+import { APIContextProvider } from "./contexts/APIContext"
 
 function App() {
 
@@ -20,11 +21,13 @@ function App() {
     <ThemeProvider theme={theme}>
 
       <ThemeContext.Provider value={{toggleTheme}}>
-        <Container>
-            <Header />
-            <Search />
-            <Dictionary />
-        </Container>
+        <APIContextProvider>
+          <Container>
+              <Header />
+              <Search />
+              <Dictionary />
+          </Container>
+        </APIContextProvider>
       </ThemeContext.Provider>
 
       <GlobalStyle />

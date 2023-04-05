@@ -1,6 +1,8 @@
 import { MagnifyingGlass } from "phosphor-react"
 import { SearchContainer } from "./styles"
 import { useForm } from "react-hook-form"
+import { useContext } from "react"
+import { APIContext } from "../../contexts/APIContext"
 
 interface DataForm {
   word: string
@@ -9,9 +11,10 @@ interface DataForm {
 export const Search = () =>{
 
   const {register, handleSubmit} = useForm<DataForm>()
+  const {sendAPI, data} = useContext(APIContext)
 
   const onSubmit = (data: DataForm) =>{
-    console.log(data.word)
+    sendAPI(data.word)
   }
 
   return(
