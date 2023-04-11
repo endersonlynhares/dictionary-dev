@@ -29,7 +29,7 @@ export const Dictionary = () => {
           : "Digite uma palavra"
       }
       {
-        data && data[0].meanings.map(meaning => {
+        data && data[0].meanings.map((meaning:any) => {
         return (
           <Meaning dataMeaning={meaning} key={meaning.partOfSpeech} />
         )
