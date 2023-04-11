@@ -2,7 +2,7 @@ import { DictionaryContainer } from "./styles"
 import { Meaning } from "../Meaning"
 import { useContext } from "react"
 import { APIContext } from "../../contexts/APIContext"
-// import ReactAudioPlayer from 'react-audio-player'
+import ReactAudioPlayer from 'react-audio-player'
 
 export const Dictionary = () => {
 
@@ -20,10 +20,10 @@ export const Dictionary = () => {
             {/* <button>
               <img src={Play} alt="botão de fonetica" />
             </button> */}
-            {/* <ReactAudioPlayer
-              src={data && data[0].phonetics[0].audio}
+            <ReactAudioPlayer
+              src={data && String(data[0].phonetics[0].audio)}
               controls
-            /> */}
+            />
           </header>
         )
           : "Digite uma palavra"
