@@ -8,13 +8,6 @@ export const Dictionary = () => {
 
   const { data } = useContext(APIContext)
 
-  const meanings = data && data[0].meanings.map(meaning => {
-    return (
-      <Meaning dataMeaning={meaning} key={meaning.partOfSpeech} />
-    )
-  })
-
-
   return (
     <DictionaryContainer>
       {
@@ -35,7 +28,13 @@ export const Dictionary = () => {
         )
           : "Digite uma palavra"
       }
-      {meanings}
+      {
+        data && data[0].meanings.map(meaning => {
+        return (
+          <Meaning dataMeaning={meaning} key={meaning.partOfSpeech} />
+        )
+      })}
+      }
     </DictionaryContainer>
   )
 
