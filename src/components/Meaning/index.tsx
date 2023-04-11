@@ -20,8 +20,6 @@ interface MeaningProps {
 
 export const Meaning = ({dataMeaning}:MeaningProps) =>{
 
-  console.log(dataMeaning.definitions)
-
   return(
     <MeaningContainer>
       <h3><em>{dataMeaning.partOfSpeech}</em></h3>
