@@ -5,7 +5,7 @@ import { useContext } from "react"
 import { APIContext } from "../../contexts/APIContext"
 
 interface DataForm {
-  word: string
+  word: any
 }
 
 export const Search = () =>{
