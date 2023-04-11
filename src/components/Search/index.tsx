@@ -11,7 +11,7 @@ interface DataForm {
 export const Search = () =>{
 
   const {register, handleSubmit} = useForm<DataForm>()
-  const {sendAPI, data} = useContext(APIContext)
+  const {sendAPI} = useContext(APIContext)
 
   const onSubmit = (data: DataForm) =>{
     sendAPI(data.word)
