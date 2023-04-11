@@ -18,7 +18,7 @@ interface Meaning{
 interface Word{
   word: string, 
   phonetic: string,
-  phonetics: Array<any>,
+  phonetics: any,
   origin: string,
   meanings: Array<Meaning>
 }
