@@ -34,7 +34,7 @@ export const Dictionary = () => {
           <Meaning dataMeaning={meaning} key={meaning.partOfSpeech} />
         )
       })}
-      }
+
     </DictionaryContainer>
   )
 
