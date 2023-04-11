@@ -13,19 +13,19 @@ import { APIContextProvider } from "./contexts/APIContext"
 function App() {
 
   const [theme, setTheme] = useState(light)
-  const toggleTheme = () =>{
-    setTheme(theme.title === "light"? dark : light)
+  const toggleTheme = () => {
+    setTheme(theme.title === "light" ? dark : light)
   }
 
   return (
     <ThemeProvider theme={theme}>
 
-      <ThemeContext.Provider value={{toggleTheme}}>
+      <ThemeContext.Provider value={{ toggleTheme }}>
         <APIContextProvider>
           <Container>
-              <Header />
-              <Search />
-              <Dictionary />
+            <Header />
+            <Search />
+            <Dictionary />
           </Container>
         </APIContextProvider>
       </ThemeContext.Provider>
