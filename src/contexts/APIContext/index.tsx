@@ -3,18 +3,22 @@ import axios from "axios"
 
 interface Definition{
   definition: string,
-  example: string,
-  synonyms: [] | null,
-  antonyms: [] | null
+  example: null | string,
+  synonyms: string[] | null,
+  antonyms: string[] | null
 }
 
 interface Meaning{
   partOfSpeech: string, 
   definitions: Array<Definition>
+  synonyms: string[] | null,
+  antonyms: string[] | null
 }
 
 interface Word{
   word: string, 
+  phonetic: string,
+  phonetics: Array<string>,
   origin: string,
   meanings: Array<Meaning>
 }

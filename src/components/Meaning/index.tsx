@@ -2,14 +2,16 @@ import { MeaningContainer } from "./styles"
 
 interface Definition{
   definition: string,
-  example: string,
-  synonyms: [] | null,
-  antonyms: [] | null
+  example: null | string,
+  synonyms: string[] | null,
+  antonyms: string[] | null
 }
 
 interface MeaningType{
   partOfSpeech: string, 
   definitions: Array<Definition>
+  synonyms: string[] | null,
+  antonyms: string[] | null
 }
 
 interface MeaningProps {
@@ -30,10 +32,16 @@ export const Meaning = ({dataMeaning}:MeaningProps) =>{
             dataMeaning.definitions.map(definition =>{
               return(
                 <ul key={definition.definition}>
-                  <li>{definition.antonyms}</li>
                   <li>{definition.definition}</li>
-                  <li>{definition.example}</li>
-                  <li>{definition.synonyms}</li>
+                  <ul>
+                    {definition.example && definition.example.length > 0 ? <li>{definition.example}</li> : null}
+
+                    {definition.synonyms && definition.synonyms.length > 0 ? <li>{definition.synonyms}</li> : null}
+
+                    {definition.antonyms && definition.antonyms.length > 0 ? <li>{definition.antonyms}</li> : null}
+                    
+                  </ul>
+                  
                 </ul>
               )
             })

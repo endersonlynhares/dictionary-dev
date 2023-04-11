@@ -9,6 +9,7 @@ export const DictionaryContainer = styled.div`
   header{
     display: flex;
     flex: 1;
+    gap: 10px;
     align-items: center;
     justify-content: space-between;
 

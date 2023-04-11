@@ -49,7 +49,16 @@ export const MeaningContainer = styled.div`
       content: '•';
       margin: 0 10px;
       font-size: 20px;
-      color: ${props => props.theme.colors["primary-500"]};; 
+      color: ${props => props.theme.colors["primary-500"]};
+    }
+
+    ul > ul{
+      ul li:before {
+        content: '◦';
+        margin: 0 10px;
+        font-size: 20px;
+        color: ${props => props.theme.colors["primary-500"]};
+      }
     }
 
   }
