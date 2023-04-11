@@ -1,5 +1,4 @@
 import { DictionaryContainer } from "./styles"
-import Play from "../../assets/play.svg"
 import { Meaning } from "../Meaning"
 import { useContext } from "react"
 import { APIContext } from "../../contexts/APIContext"
