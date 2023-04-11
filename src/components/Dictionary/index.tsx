@@ -2,11 +2,13 @@ import { DictionaryContainer } from "./styles"
 import { Meaning } from "../Meaning"
 import { useContext } from "react"
 import { APIContext } from "../../contexts/APIContext"
-import ReactAudioPlayer from 'react-audio-player'
+// import ReactAudioPlayer from 'react-audio-player'
 
 export const Dictionary = () => {
 
   const { data } = useContext(APIContext)
+
+  console.log(data && String(data[0].phonetics[0].audio))
 
   return (
     <DictionaryContainer>
@@ -20,10 +22,11 @@ export const Dictionary = () => {
             {/* <button>
               <img src={Play} alt="botão de fonetica" />
             </button> */}
-            <ReactAudioPlayer
-              src={data && String(data[0].phonetics[0].audio)}
+            {/* <ReactAudioPlayer
+              src={}
               controls
-            />
+            /> */}
+            <audio src={data && String(data[0].phonetics[0].audio)} controls></audio>
           </header>
         )
           : "Digite uma palavra"
