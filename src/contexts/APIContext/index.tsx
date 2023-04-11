@@ -26,7 +26,7 @@ interface Word{
 
 interface APIContextType{
   sendAPI: (newWord: string) => void
-  data: Array<Word> | null
+  data: any | null
 }
 
 interface APIContextProviderProps{
